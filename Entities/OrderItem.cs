@@ -21,7 +21,23 @@ namespace _Order_Estudo.Entities
             return Quantity * Price;
         }
 
+
+
         public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Product.Name);
+            sb.Append(", $" + Price.ToString("F2", CultureInfo.InvariantCulture));
+            sb.Append(", Quantity: " + Quantity);
+            sb.Append(", Subtotal: $" + SubTotal().ToString("F2",CultureInfo.InvariantCulture));
+
+
+
+            return sb.ToString();
+        }
+
+
+        /*public override string ToString()
         {
             return Product.Name
                 + ", $"
@@ -31,7 +47,7 @@ namespace _Order_Estudo.Entities
                 + ", Subtotal: $"
                 + SubTotal().ToString("F2", CultureInfo.InvariantCulture);
         }
-
+        */
 
 
     }

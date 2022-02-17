@@ -21,15 +21,27 @@ namespace _Order_Estudo.Entities
             BirthDate = birthDate;
         }
 
+
         public override string ToString()
         {
-            return Name
-                + ", ("
-                + BirthDate.ToString("dd/MM/yyyy")
-                + ") - "
-                + Email;
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Name + ", (");
+            sb.Append(BirthDate.ToString("dd/MM/yyyy"));
+            sb.Append(") - " + Email);
+            
+
+
+            return sb.ToString();
         }
 
+         /* public override string ToString()
+          {
+              return Name
+                  + ", ("+ BirthDate.ToString("dd/MM/yyyy")
+                  + ") - "
+                  + Email;
+          }
+      */
 
     }
 }

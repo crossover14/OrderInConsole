@@ -39,6 +39,7 @@ namespace _Order_Estudo
                 int quantity = int.Parse(Console.ReadLine());
                 OrderItem orderItem = new OrderItem(quantity, price,product);
                 order.AddItem(orderItem);
+                
             }
 
             Console.WriteLine();
